@@ -1,0 +1,288 @@
+/*CSS RESET FILE ->
+   http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+   The goal of a reset stylesheet is to reduce browser inconsistencies in things like default line heights, margins
+   and font sizes of headings, and so on.
+*/
+* {
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+}
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, button, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+html, body {
+  overflow-x: hidden;
+}
+
+body {
+  line-height: 1;
+  word-wrap: break-word;
+  font-size: 100%;
+  overflow: hidden;
+}
+
+p {
+  padding-bottom: 10px;
+}
+
+figcaption {
+  font-style: italic;
+}
+
+button {
+  outline: 0;
+  color: inherit;
+}
+
+q {
+  display: inline;
+  font-style: italic;
+}
+
+textarea, input[type=text], input[type=button], input[type=submit], input[type=reset], input[type=search], input[type=password] input[type=number], input[type=email] {
+  -webkit-appearance: none;
+  appearance: none;
+  font-family: inherit;
+  border-radius: 0;
+  border: 2px solid transparent;
+  outline: none;
+  resize: none;
+}
+
+input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.screen-reader-text {
+  clip: rect(1px, 1px, 1px, 1px);
+  position: absolute !important;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+a:hover, a:focus, a:active, a:visited {
+  text-decoration: none;
+  color: inherit;
+}
+
+strong {
+  font-weight: 700;
+}
+
+em {
+  font-style: italic;
+}
+
+ol, ul {
+  list-style: none;
+  text-decoration: none;
+}
+
+/*Variables*/
+/*Colors*/
+/*Fonts*/
+/*Sizing*/
+/*Mixins*/
+/*Common widths: 1440px, 1200px, 1080px, 960px, 840px, 720px, 600px*/
+/*Constants + Google Fonts*/
+/*Global Styles*/
+body {
+  background-color: #c3cfe2;
+  font-family: "Roboto", "Arial", sans-serif;
+  font-weight: 500;
+  padding: 30px;
+}
+
+/*PART 1*/
+/*Testimonial Section*/
+.testimonial__section {
+  position: relative;
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+  padding-block-end: 100px;
+}
+.testimonial__section .testimonial__holder {
+  border-radius: 30px;
+  overflow: hidden;
+  font-size: 1.5rem;
+  line-height: 1.6;
+  box-shadow: 0px 10px 10px 3px rgba(93, 93, 93, 0.4);
+}
+@media screen and (min-width: 768px) {
+  .testimonial__section .testimonial__holder {
+    font-size: 2rem;
+  }
+}
+.testimonial__section .testimonial__holder--body {
+  background-color: #ffffff;
+  padding: 30px 30px 75px 30px;
+  color: #5D5D5D;
+}
+@media screen and (min-width: 768px) {
+  .testimonial__section .testimonial__holder--body {
+    padding: 75px 50px 100px 50px;
+  }
+}
+.testimonial__section .testimonial__holder--footer {
+  position: relative;
+  background-color: #686de0;
+  padding: 75px 30px 30px 30px;
+  text-align: center;
+}
+@media screen and (min-width: 768px) {
+  .testimonial__section .testimonial__holder--footer {
+    padding: 100px 50px 50px 50px;
+  }
+}
+.testimonial__section .testimonial__holder--footer img {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 140px;
+  border-radius: 90px;
+  border: 7px solid #ffffff;
+}
+@media screen and (min-width: 768px) {
+  .testimonial__section .testimonial__holder--footer img {
+    max-width: 180px;
+  }
+}
+.testimonial__section .testimonial__holder--footer h3 {
+  color: #ffffff;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+.testimonial__section .testimonial__holder--footer span {
+  display: block;
+  font-size: 1.25rem;
+  color: #b3b6eb;
+}
+
+/*PART 2*/
+/*Portfolio Section*/
+.portfolio__section {
+  position: relative;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.portfolio__section .portfolio__holder {
+  display: grid;
+  grid-template: repeat(9, 1fr)/repeat(1, auto);
+  grid-gap: 30px;
+  justify-content: center;
+}
+@media screen and (min-width: 768px) {
+  .portfolio__section .portfolio__holder {
+    grid-template: repeat(3, 1fr)/repeat(2, 1fr);
+  }
+}
+@media screen and (min-width: 1024px) {
+  .portfolio__section .portfolio__holder {
+    grid-template: repeat(3, 1fr)/repeat(3, 1fr);
+  }
+}
+.portfolio__section .portfolio__holder .portfolio-content__container {
+  position: relative;
+  background-color: #252b3e;
+  border-radius: 30px;
+  overflow: hidden;
+}
+.portfolio__section .portfolio__holder .portfolio-content__container img {
+  display: block;
+  max-width: 100%;
+  width: 100%;
+  transition: opacity 300ms ease-in-out;
+}
+.portfolio__section .portfolio__holder .portfolio-content__container:hover img {
+  opacity: 0;
+}
+.portfolio__section .portfolio__holder .portfolio-content__container button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 5px 15px;
+  background-color: #ffffff;
+  border-radius: 5px;
+  opacity: 0;
+  transition: 300ms ease-in-out opacity;
+}
+.portfolio__section .portfolio__holder .portfolio-content__container:hover button {
+  opacity: 1;
+}
+
+/*PART 3*/
+/*Social Media Sidebar*/
+.socials__sidebar {
+  display: none;
+}
+@media screen and (min-width: 768px) {
+  .socials__sidebar {
+    display: block;
+    position: fixed;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    color: #ffffff;
+  }
+  .socials__sidebar .socials__container {
+    display: flex;
+    align-items: center;
+    width: 275px;
+    margin-left: calc(100% - 60px);
+    transition: 500ms ease all;
+  }
+  .socials__sidebar .socials__container:hover {
+    margin-left: 0px;
+  }
+  .socials__sidebar .socials__container--icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    width: 60px;
+    padding: 15px;
+    margin-right: 15px;
+  }
+  .socials__sidebar .socials__container a {
+    text-decoration: underline;
+  }
+  .socials__sidebar .socials__container--blog {
+    background-color: #e17b77;
+  }
+  .socials__sidebar .socials__container--twitter {
+    background-color: #00aced;
+  }
+  .socials__sidebar .socials__container--linkedin {
+    background-color: #007bb6;
+  }
+  .socials__sidebar .socials__container--fb {
+    background-color: #3b5998;
+  }
+  .socials__sidebar .socials__container--github {
+    background-color: #333333;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

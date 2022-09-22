@@ -1,0 +1,93 @@
+/*Variables*/
+/*Colors*/
+$page-bg: #c3cfe2;
+
+$testimonial-bg: #686de0;
+$testimonial-heading: #ffffff;
+$testimonial-reference: #b3b6eb;
+$testimonial-text: #5D5D5D;
+
+$portfolio-bg: #252b3e;
+
+$socials-blog-bg: #e17b77;
+$socials-twitter-bg: #00aced;
+$socials-linkedin-bg: #007bb6;
+$socials-fb-bg: #3b5998;
+$socials-github-bg: #333333;
+
+
+/*Fonts*/
+$roboto: 'Roboto', 'Arial', sans-serif;
+
+
+/*Sizing*/
+$xxs: 5px;
+$xs: 15px;
+$small: 25px;
+$medium: 30px;
+$large: 50px;
+$xl: 75px;
+$xxl: 100px;
+
+$tablet: 768px;
+$desktop: 1024px;
+
+
+/*Mixins*/
+@mixin sectionWidth($maxWidth) {
+    position: relative;
+    width: 100%;
+    max-width: $maxWidth;
+    margin: 0 auto;
+}
+/*Common widths: 1440px, 1200px, 1080px, 960px, 840px, 720px, 600px*/
+
+
+@mixin centerAbsolute {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);    
+}
+
+
+@mixin centerAbsoluteY {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);   
+}
+
+
+@mixin flexAlign {
+    display: flex;
+    align-items: center;
+}
+
+
+@mixin flexCenter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+@mixin responsiveImg {
+    display: block;
+    max-width: 100%;
+    width: 100%;
+}
+
+
+@mixin tablet {
+    @media screen and (min-width: $tablet) {
+        @content;
+    }
+}
+
+
+@mixin desktop {
+    @media screen and (min-width: $desktop) {
+        @content;
+    }
+}

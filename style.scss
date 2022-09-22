@@ -1,0 +1,187 @@
+/*Constants + Google Fonts*/
+@use 'reset';
+@use 'constants' as c;
+
+
+/*Global Styles*/
+body {
+    background-color: c.$page-bg;
+    font-family: c.$roboto;
+    font-weight: 500;
+    padding: c.$medium;
+}
+
+
+/*PART 1*/
+/*Testimonial Section*/
+.testimonial__section {
+    @include c.sectionWidth(600px);
+    padding-block-end: c.$xxl;
+
+    .testimonial__holder {
+        border-radius: c.$medium;
+        overflow: hidden;
+        font-size: 1.5rem;
+        line-height: 1.6;
+        box-shadow: 0px 10px 10px 3px rgba(93,93,93,0.4);
+
+        @include c.tablet {
+            font-size: 2rem;
+        }
+
+        &--body {
+            background-color: c.$testimonial-heading;
+            padding: c.$medium c.$medium c.$xl c.$medium;
+            color: c.$testimonial-text;
+
+            @include c.tablet {
+                padding: c.$xl c.$large c.$xxl c.$large;
+            }
+        }
+
+        &--footer {
+            position: relative;
+            background-color: c.$testimonial-bg;
+            padding: c.$xl c.$medium c.$medium c.$medium;
+            text-align: center;
+
+            @include c.tablet {
+                padding: c.$xxl c.$large c.$large c.$large;
+            }
+
+            img {
+                @include c.centerAbsoluteY;
+                max-width: 140px;
+                border-radius: 90px;
+                border: 7px solid c.$testimonial-heading;
+
+                @include c.tablet {
+                    max-width: 180px;
+                }
+            }
+
+            h3 {
+                color: c.$testimonial-heading;              
+                text-transform: uppercase;
+                letter-spacing: 2px;
+            }
+
+            span {
+                display: block;
+                font-size: 1.25rem;
+                color: c.$testimonial-reference;
+            }
+        }
+    }
+}
+
+
+/*PART 2*/
+/*Portfolio Section*/
+.portfolio__section {
+    @include c.sectionWidth(1200px);
+
+    .portfolio__holder {
+        display: grid;
+        grid-template: repeat(9, 1fr) / repeat(1, auto);
+        grid-gap: c.$medium;
+        justify-content: center;
+
+        @include c.tablet {
+            grid-template: repeat(3, 1fr) / repeat(2, 1fr);
+        }
+
+        @include c.desktop {
+            grid-template: repeat(3, 1fr) / repeat(3, 1fr);
+        }
+
+        .portfolio-content__container {
+            position: relative;
+            background-color: c.$portfolio-bg;
+            border-radius: c.$medium;
+            overflow: hidden;
+
+            img {
+                @include c.responsiveImg;
+                transition: opacity 300ms ease-in-out;
+            }
+
+            &:hover img {
+                opacity: 0;
+            }
+
+            button {
+                @include c.centerAbsolute;
+                padding: c.$xxs c.$xs;
+                background-color: c.$testimonial-heading;
+                border-radius: 5px;
+                opacity: 0;
+                transition: 300ms ease-in-out opacity;
+            }
+
+            &:hover button {
+                opacity: 1;
+            }
+        }
+    }
+}
+
+
+/*PART 3*/
+/*Social Media Sidebar*/
+.socials__sidebar {
+    display: none;
+
+    @include c.tablet {
+        display: block;
+        position: fixed;
+        top: 50%;
+        right: 0;
+        transform: translateY(-50%);
+        color: c.$testimonial-heading;
+
+        .socials__container {
+            @include c.flexAlign;
+            width: 275px;
+            margin-left: calc(100% - 60px);
+            transition: 500ms ease all;
+
+            &:hover {
+                margin-left: 0px;
+            }
+
+            &--icon {
+                @include c.flexCenter;
+                font-size: 1.5rem;
+                width: 60px;
+                padding: c.$xs;
+                margin-right: c.$xs;
+            }
+
+            a {
+                text-decoration: underline;
+            }
+
+            &--blog {
+                background-color: c.$socials-blog-bg;
+            }
+
+            &--twitter {
+                background-color: c.$socials-twitter-bg;
+
+            }
+
+            &--linkedin {
+                background-color: c.$socials-linkedin-bg;
+            }
+
+            &--fb {
+                background-color: c.$socials-fb-bg;
+            }
+
+            &--github {
+                background-color: c.$socials-github-bg;
+            }
+        }
+    }
+}
