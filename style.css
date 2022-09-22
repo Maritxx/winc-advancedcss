@@ -227,6 +227,7 @@ body {
   border-radius: 5px;
   opacity: 0;
   transition: 300ms ease-in-out opacity;
+  cursor: pointer;
 }
 .portfolio__section .portfolio__holder .portfolio-content__container:hover button {
   opacity: 1;
